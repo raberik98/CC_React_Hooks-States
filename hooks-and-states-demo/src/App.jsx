@@ -1,9 +1,15 @@
 import './App.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function App() {
   const [todoList, setTodoList] = useState([]);
   const [newTodo, setNewTodo] = useState();
+  const [listCounter, setListCounter] = useState(todoList.length);
+
+  useEffect(() => {
+    console.log(`The lenght of your TodoList is: ${todoList.length}`);
+    setListCounter(todoList.length)
+  },[todoList]);
 
   function addNewTodo(e) {
     e.preventDefault()
@@ -12,6 +18,8 @@ function App() {
 
   return (
     <form onSubmit={(e)=>{addNewTodo(e)}} className="TodoForm">
+      {listCounter>0 ? <div className='TodoCounter'>{listCounter}</div> : <></>}
+      
       <TodoInput addNewTodo={setNewTodo}/>
       <TodoListComponent ListOfItems={todoList}/>
       <button type='submit' className='AddNewTodo'>Add new Todo!</button>
