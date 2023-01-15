@@ -1,0 +1,56 @@
+.TodoForm{
+  position: absolute;
+  left: 10%;
+  top: 10%;
+  width: 400px;
+  height: 500px;
+  background-color: lightblue;
+  border-radius: 20px;
+}
+
+.TodoInput {
+  margin: 0px;
+  position: absolute;
+  font-size: 20px;
+  top: 5%;
+  left: 7%;
+  height: 1rem;
+  width: 80%;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.TodoList{
+  margin: 0px;
+  position: absolute;
+  top: 20%;
+  left: 7%;
+  width: 80%;
+  background-color: white;
+  list-style: none;
+  min-height: 20px;
+  border-radius: 10px;
+  padding: 10px;
+  max-height: 70%;
+}
+
+.TodoListItem{
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+}
+
+.AddNewTodo{
+  margin: 0px;
+  position: absolute;
+  bottom: 5%;
+  left: 7%;
+  width: 80%;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(67, 67, 167);
+  color: white;
+  font-size: 20px;
+}
